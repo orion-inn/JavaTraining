@@ -7,7 +7,7 @@ Note that the toString() and main() methods cannot be changed.
 Requirements:
 1. The DBObject interface must be implemented in the User class.
 2. The initializeIdAndName method must return a valid object of the User type, the object on which the method is called ("this" object).
-3. The initializeIdAndName method must set the values of the id and name fields according to the parameters passed to it.
+3. The initializeIdAndName method must set the values of the id and name fields according to the passed parameters.
 4. The program should display: "The user's name is Neo, id = 1".
 5. Do not change the toString method.
 6. Do not change the main method.
