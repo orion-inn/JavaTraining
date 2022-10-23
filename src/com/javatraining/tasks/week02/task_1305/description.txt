@@ -1,0 +1,9 @@
+Uncomment the commented lines
+Fix 4 errors in the program so that it compiles.
+
+Requirements:
+1. Variables declared in an interface can only have the widest access level (public).
+2. It is possible to extend only from a class: to implement interfaces, the keyword implements is used.
+3. The Hobby class must be declared with the static access modifier.
+4. To access the HOBBY variable, you do not need to create a Dream object.
+5. Do not change interface declarations.

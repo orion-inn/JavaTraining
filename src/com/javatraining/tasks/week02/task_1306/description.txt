@@ -1,0 +1,10 @@
+Uncomment the commented lines.
+Look at the program and fix it so it compiles and runs:
+Move the implementation of the initializeIdAndName method to the User class.
+Make the initializeIdAndName in the User class return the User type.
+
+Requirements:
+1. The DBObject interface must contain only the declaration of the initializeIdAndName method without an implementation.
+2. Implement the initializeIdAndName method in the User class.
+3. The initializeIdAndName method in the User class must have a return type of User.
+4. The initializeIdAndName method must assign values to the id and name fields of the User object in accordance with the parameters passed to it and return this object.

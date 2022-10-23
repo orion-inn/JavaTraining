@@ -1,3 +1,4 @@
+Uncomment the commented lines.
 Implement the DBObject interface in the User class.
 Implement the initializeIdAndName method so that the program runs and displays: "The user's name is Neo, id = 1".
 The toString method and the main method cannot be changed.

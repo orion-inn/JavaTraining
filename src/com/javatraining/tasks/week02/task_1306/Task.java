@@ -1,19 +1,25 @@
-package com.javatraining.tasks.week02.task_1320;
+package src.com.javatraining.tasks.week02.task_1306;
 
 public class Task {
 //  public static void main(String[] args) throws Exception {
 //    System.out.println(Matrix.NEO);
+//    System.out.println(Matrix.TRINITY);
 //  }
 //
 //  static class Matrix {
 //    public static DBObject NEO = new User().initializeIdAndName(1, "Neo");
+//    public static DBObject TRINITY = new User().initializeIdAndName(2, "Trinity");
 //  }
 //
 //  interface DBObject {
-//    DBObject initializeIdAndName(long id, String name);
+//    DBObject initializeIdAndName(long id, String name) {
+//      this.id = id;
+//      this.name = name;
+//      return this;
+//    }
 //  }
 //
-//  static class User {
+//  static class User implements DBObject {
 //    long id;
 //    String name;
 //

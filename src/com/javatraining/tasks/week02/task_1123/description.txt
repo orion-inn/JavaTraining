@@ -1,0 +1,9 @@
+Implement a method that returns an object of the Pair class.
+The x field of this object must contain the minimum number, and the y field must contain the maximum number from the inputArray array.
+
+Requirements:
+1. Do not change the Pair class.
+2. Do not change the main method.
+3. Add the implementation of the getMinimumMaximumPair method: it should return a pair of minimum and maximum.
+4. The program should display the correct result.
+5. The getMinimumMaximumPair method must not modify the inputArray array.
