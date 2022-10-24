@@ -1,4 +1,4 @@
-package src.com.javatraining.tasks.week02.task_1123;
+package com.javatraining.tasks.week02.task_1123;
 
 public class Task {
   public static void main(String[] args) {
@@ -15,9 +15,20 @@ public class Task {
       return new Pair(null, null);
     }
 
-    // your code here
+    Integer minimumValue = null;
+    Integer maximumValue = null;
 
-    return new Pair(0, 0);
+    for (int value : inputArray) {
+      if (minimumValue == null || minimumValue > value) {
+        minimumValue = value;
+      }
+
+      if (maximumValue == null || maximumValue < value) {
+        maximumValue = value;
+      }
+    }
+
+    return new Pair(minimumValue, maximumValue);
   }
 
   public static class Pair {
