@@ -1,4 +1,5 @@
 .temp*
+/out/
 
 ### IntelliJ IDEA ###
 .idea
