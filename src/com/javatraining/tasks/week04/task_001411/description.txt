@@ -1,0 +1,12 @@
+User, Loser, Coder and Proger
+1) Enter [in a loop] several lines from the keyboard (keys).
+Keys can be: "user", "loser", "coder", "proger".
+The input is over when the string does not match any of the above.
+2) For the each line entered:
+Create the appropriate object [see Person.java], for example, for the string "user" you need to create an object of the User class.
+Pass this object to the doWork method.
+3) Write an implementation of doWork method which:
+Calls the live() method on the passed object if that object (person) is of type User.
+Calls the doNothing() method if person is of type Loser.
+Calls the writeCode() method if person is of type Coder.
+Calls the enjoy() method if person is of type Proger.
