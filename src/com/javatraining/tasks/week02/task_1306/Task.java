@@ -1,4 +1,4 @@
-package com.javatraining.tasks.week02.task_1306;
+package src.com.javatraining.tasks.week02.task_1306;
 
 public class Task {
   public static void main(String[] args) throws Exception {
