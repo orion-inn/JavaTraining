@@ -1,6 +1,7 @@
 package src.com.javatraining.tasks.week03.task_001405;
 
 public class Solution {
+    /*
     public static void main(String[] args) {
         Food food = new Food();
         Selectable selectable = new Food();
@@ -26,4 +27,5 @@ public class Solution {
             System.out.println("The food was eaten");
         }
     }
+    */
 }

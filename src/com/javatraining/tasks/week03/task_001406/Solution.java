@@ -1,6 +1,7 @@
 package src.com.javatraining.tasks.week03.task_001406;
 
 public class Solution {
+    /*
     public static void main(String[] args) {
         Object obj = //Add your code here
 
@@ -27,4 +28,5 @@ public class Solution {
 
     static class Jerry extends GrayMouse {
     }
+    */
 }
