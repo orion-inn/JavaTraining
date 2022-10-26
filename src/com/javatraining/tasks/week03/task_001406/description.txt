@@ -1,0 +1,7 @@
+creating a mouse.
+initialize the obj object with such a class that the main() method will execute without errors.
+
+1. The GrayMouse class must inherit from the Mouse class.
+2. The Jerry class must inherit from the GrayMouse class.
+3. The obj variable must contain an object that will be both Mouse, GrayMouse, and Jerry at the same time.
+4. The main method must call the printClasses method.
