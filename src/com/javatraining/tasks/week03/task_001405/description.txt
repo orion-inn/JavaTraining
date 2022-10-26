@@ -1,0 +1,13 @@
+Time to eat
+Implement the Selectable interface in the Food class.
+The onSelect() method should display the phrase "The food was selected" on the screen.
+Think about which methods can be called on the food variable, and which methods can be called on the selectable.
+In callFoodMethods method, call onSelect;onEat methods, if possible.
+In callSelectableMethods method, call onSelect;onEat methods, if possible.
+Don't use explicit type casting.
+
+Requirements:
+1. The Selectable interface should be implemented in the Food class.
+2. The onSelect() method in the Food class should display the phrase "The food was selected".
+3. In the callFoodMethods method, the Food object methods should be called.
+4. In the callSelectableMethods method, methods available for any object implementing the Selectable interface should be called.

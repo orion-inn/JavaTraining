@@ -1,0 +1,17 @@
+Wine degustation
+Create an abstract class Drink with an implemented public void taste() method that prints "Tasty" to console.
+Create Wine class that inherits from Drink and implements a public String getHolidayName() method that returns the string "Birthday".
+Create a Wine-derived SparklingWine class with a public String getHolidayName() method that returns the string "New Year".
+Write an implementation of the getDeliciousDrink, getWine, getSparklingWine methods.
+All classes must be in separate files.
+
+Requirements:
+1. The abstract class Drink must be created in a separate file.
+2. In the Drink class, the public void taste() method must be implemented, which displays the string "Tasty" on the screen.
+3. The Wine class must be created in a separate file and be a descendant of Drink class.
+4. In Wine class, the public String getHolidayName() method must be implemented, which returns the string - "Birthday".
+5. The SparklingWine class must be created in a separate file and be a descendant of Wine class.
+6. In SparklingWine class, the public String getHolidayName() method must be implemented, which returns a string - "New Year".
+7. The Solution class must implement getDeliciousDrink() method, which returns an object of Wine.
+8. The Solution class must implement getWine() method, which returns an object of Wine.
+9. The Solution class must implement getSparklingWine() method, which returns an object of SparklingWine.
