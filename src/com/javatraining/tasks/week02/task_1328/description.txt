@@ -1,0 +1,16 @@
+First, understand what the code does.
+Then change the code to match the new architecture and add new logic:
+Make the AbstractRobot class abstract, move the attack and defense logic from Robot to AbstractRobot.
+Edit the Robot class considering AbstractRobot.
+Extend the BodyPart class with a new body part BodyPart.CHEST
+Add a new body part to the implementation of the Attackable and Defensable interfaces (in the AbstractRobot class).
+What's wrong with hitCount parameter?
+Suggest attack/defence logic based on Math.random()
+
+Requirements:
+1. The AbstractRobot class must be abstract.
+2. The AbstractRobot class must implement the Attackable and Defensable interfaces.
+3. The Robot class must inherit from the AbstractRobot class.
+4. The logic of robot behavior should be placed in the AbstractRobot class.
+5. The BodyPart class must contain and initialize the final static variable CHEST of type BodyPart.
+6. A new body part needs to be added to the logic of the attack and defense methods in the AbstractRobot class.
