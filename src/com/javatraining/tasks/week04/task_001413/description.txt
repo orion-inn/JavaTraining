@@ -1,0 +1,12 @@
+Create CompItem interface.
+Add the String getName() method to it.
+Create classes Keyboard, Mouse, Monitor that implement the CompItem interface.
+The getName() method must return the name of the class, for example the Keyboard class would be "Keyboard".
+Create a class Computer.
+Add a private keyboard field of type Keyboard to the Computer class.
+Add a private mouse field of type Mouse to the Computer class.
+Add a private monitor field of type Monitor to the Computer class.
+Create a constructor with three parameters in the Computer class using the Alt+Insert key combination (for Windows) inside the class (Constructor command).
+Inside the constructor, initialize all three fields (variables) of the class according to the passed parameters.
+Create getters for the fields of the Computer class (in the class, use the Alt+Insert key combination (for Windows) and select the Getter command).
+All generated classes and interface should be in separate files.

@@ -1,0 +1,14 @@
+Cleaning center
+Implement the cleanAllApartments() method.
+Walk through the list of apartments:
+for one-room apartments (OneRoomApt) call the clean1Room() method;
+for two-room apartments (TwoRoomApt) call the clean2Rooms() method;
+for three-room apartments (ThreeRoomApt) call the clean3Rooms() method.
+Use instanceof.
+
+Requirements:
+1. The cleanAllApartments method must take a list of apartments as a parameter.
+2. In the cleanAllApartments method for all one-room apartments (OneRoomApt) contained in the list, you must call the clean1Room() method.
+3. In the cleanAllApartments method for all two-room apartments (TwoRoomApt) contained in the list, you must call the clean2Rooms() method.
+4. In the cleanAllApartments method for all three-room apartments (ThreeRoomApt) contained in the list, you must call the clean3Rooms() method.
+5. Classes OneRoomApt, TwoRoomApt, ThreeRoomApt must support (implement) the Apartment interface.

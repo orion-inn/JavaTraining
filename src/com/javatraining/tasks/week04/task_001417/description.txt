@@ -1,0 +1,16 @@
+Expand the functionality of the program, which will allow you to manipulate currencies.
+In the existing abstract class Money, create a private amount field of double type.
+Create a public getter for the amount(public double getAmount()) field so that this field can be accessed from outside the Money class.
+In separate files, create the Euro, Dinar and USD classes, which will be descendants of the Money class.
+In the Euro, Dinar and USD classes implement the getCurrencyName() method which will return the name of the corresponding currency (string) as an abbreviation (USD, EUR, RSD).
+In the Euro, Dinar, and USD classes, implement a public (public) constructor that takes one parameter and calls the base class (super) constructor with that parameter.
+Fill in the list allMoney with objects of all possible ones within the framework of the problem statement and the functionality of the currency program.
+
+Requirements:
+1. The Money class must contain a private amount field of the double type.
+2. The Money class must implement a public constructor with one double parameter that sets the value of the amount variable according to the passed parameter.
+3. In the Money class, the getAmount() public method must be implemented, which will return the value of the amount field.
+4. The Euro, Dinar and USD classes must be descendants of the Money class and exist in separate files.
+5. The getCurrencyName() method must be implemented in the Euro, Dinar and USD classes.
+6. The getCurrencyName() method must return the name of the corresponding currency (string) as an abbreviation (USD, EUR, RSD).
+7. The Euro, Dinar and USD classes must implement a public constructor with one double parameter that sets the value of the amount field of the Money class by calling the parent class constructor with the same parameter.

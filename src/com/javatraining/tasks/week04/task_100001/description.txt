@@ -1,0 +1,11 @@
+Do some reading about UML diagrams
+https://www.baeldung.com/java-composition-aggregation-association
+https://java-programming.mooc.fi/part-11/1-class-diagrams
+
+Implement the hierarchy of classes as it shown on the picture
+Each Shape has its volume.
+The volume is calculated differently for different types of shapes
+The Box class is a container, it can contain other shapes.
+The add() method takes a Shape as input.
+We should be able to add new shapes as long as there is enough space for them in the Box (only the volume is count, ignoring the type of shape).
+If there is not enough space to add a new shape, then the method should return false.

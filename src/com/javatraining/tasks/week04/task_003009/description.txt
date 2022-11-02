@@ -1,0 +1,8 @@
+Declare and implement the logic of the private static method Set<Integer> getRadix(String number),
+where you need to determine in which numeral systems (from 2 to 36) the representation of the "number" parameter (passed in decimal numeral system)
+is a palindrome and add the index of such systems into the result.
+If the passed number is incorrect, return an empty HashSet.
+In number systems with a base greater than 10, Latin letters are used as digits.
+For example, the decimal number 35 corresponds to the number "Z" in base-36 number system.
+In the getRadix method, catch NumberFormatException.
+
