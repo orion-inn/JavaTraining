@@ -1,0 +1,10 @@
+Different methods for different types
+For this task you need:
+Read data from the console until the word "exit" is entered.
+For each value except "exit", call the print() method.
+If the entered value:
+- contains a dot '.', call the print() method for Double;
+- greater than zero but less than 128, call the print() method for short;
+- less than or equal to zero or greater than or equal to 128, call the print() method for Integer;
+- otherwise, call the print() method for String.
+

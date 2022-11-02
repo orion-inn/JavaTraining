@@ -1,0 +1,17 @@
+Variable loading order
+Figure out what and in what sequence is initialized in this program.
+You could set breakpoints and use a debugger.
+Correct the data initialization order so that the result should be as follows:
+
+static void init()
+static block
+public static void main
+non-static block
+static void printAllFields
+0
+null
+solution constructor
+static void printAllFields
+6
+first name
+

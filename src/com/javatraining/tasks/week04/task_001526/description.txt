@@ -1,0 +1,4 @@
+The program's output is 0 9, but it should be 6 9.
+Find one (!) error and fix it.
+Use debug.
+The initialize() method in class A must have the correct access modifier.
