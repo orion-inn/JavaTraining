@@ -13,11 +13,17 @@ public class Solution {
         doMove(bender, enemy);
         doMove(enemy, bender);
         doMove(bender, enemy);
+
+        System.out.printf("%s made %d hits%n", bender.getName(), bender.getHitCount());
+        System.out.printf("%s made %d hits%n", enemy.getName(), enemy.getHitCount());
     }
 
     public static void doMove(AbstractRobot robotFirst, AbstractRobot robotSecond) {
         BodyPart attacked = robotFirst.attack();
         BodyPart defended = robotSecond.defense();
+        if (!attacked.toString().equals(defended.toString())) {
+            robotFirst.increaseHitCount();
+        }
         System.out.println(String.format("%s attacked %s in the %s, defended %s",
                 robotFirst.getName(), robotSecond.getName(), attacked, defended));
     }

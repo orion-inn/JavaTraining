@@ -7,5 +7,9 @@ public class Solution {
     }
 
     //add println method here
+    public static void println(Bridge bridge) {
+        System.out.printf("%d cars on %s%n",
+                bridge.getCarsCount(), bridge.getClass().getSimpleName());
+    }
 }
 

@@ -11,19 +11,26 @@ public class Solution {
 
     public static void callFoodMethods(Food food) {
         //call methods
+        food.onSelect();
+        food.onEat();
     }
 
     public static void callSelectableMethods(Selectable selectable) {
         //call methods
+        selectable.onSelect();
     }
 
     interface Selectable {
         void onSelect();
     }
 
-    static class Food {
+    static class Food implements Selectable {
         public void onEat() {
             System.out.println("The food was eaten");
+        }
+
+        public void onSelect() {
+            System.out.println("The food was selected.");
         }
     }
 }
