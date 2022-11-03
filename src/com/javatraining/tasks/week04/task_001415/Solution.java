@@ -15,6 +15,17 @@ public class Solution {
 
     public static void cleanAllApartments(List<Apartment> apartments) {
         // implement Requirements 1-4 here
+        for (Apartment apartment : apartments) {
+            if (apartment instanceof OneRoomApt) {
+                ((OneRoomApt) apartment).clean1Room();
+            } else if (apartment instanceof TwoRoomApt) {
+                ((TwoRoomApt) apartment).clean2Rooms();
+            } else if (apartment instanceof ThreeRoomApt) {
+                ((ThreeRoomApt) apartment).clean3Rooms();
+            } else {
+                System.out.println("Hm, don't know what to do with this apartment!");
+            }
+        }
     }
 
     static interface Apartment {
