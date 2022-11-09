@@ -5,23 +5,20 @@ import java.util.*;
 public class Box extends Shape {
 
     private List<Shape> box;
+    private double freeSpace;
 
     public Box(double volume) {
         super(volume);
         this.box = new ArrayList<>();
+        this.freeSpace = volume;
     }
 
     public boolean add(Shape shape) {
-        double freeSpace = this.getVolume();
-
-        for (Shape shapeInBox : box) {
-            freeSpace -= shapeInBox.getVolume();
+        if (shape.getVolume() <= freeSpace) {
+            box.add(shape);
+            freeSpace -= shape.getVolume();
+            return true;
         }
-
-        if (shape.getVolume() > freeSpace) {
-            return false;
-        }
-
-        return box.add(shape);
+        return false;
     }
 }

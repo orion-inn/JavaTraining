@@ -4,17 +4,12 @@ public class SolidOfRevolution extends Shape {
 
     private double radius;
 
-    public SolidOfRevolution (double radius) {
-        super(Math.PI * Math.pow(radius, 2));
+    public SolidOfRevolution (double volume, double radius) {
+        super(volume);
         this.radius = radius;
     }
 
     public double getRadius() {
         return radius;
-    }
-
-    @Override
-    public double getVolume() {
-        return super.getVolume();
     }
 }
