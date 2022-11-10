@@ -18,6 +18,9 @@ public class Solution {
             this.name = name;
             this.allMoney = new ArrayList<Money>();
             // your code here
+            this.allMoney.add(new Euro(Math.random() * 1000));
+            this.allMoney.add(new Dinar(Math.random() * 1000));
+            this.allMoney.add(new USD(Math.random() * 1000));
         }
 
         private List<Money> allMoney;

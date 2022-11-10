@@ -29,6 +29,7 @@ public class Solution {
             System.out.println("The food was eaten");
         }
 
+        @Override
         public void onSelect() {
             System.out.println("The food was selected.");
         }
