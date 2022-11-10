@@ -1,0 +1,7 @@
+Extension of week04.task_100001
+
+- implement getShapes() getter in Box class
+- turn Shape class into interface with only "double getVolume()" method
+- remove the "volume" parameter from Shape, move the volume calculation from constructor to getVolume() method implementation (look at Pyramid class)
+- read the description of java.util.Collections.sort() method to understand how the list of shapes can be sorted by Volume
+- make the Shape interface implement the java.lang.Comparable interface

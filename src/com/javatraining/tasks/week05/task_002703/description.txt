@@ -1,0 +1,7 @@
+Create a deadlock
+https://www.baeldung.com/java-deadlock-livelock
+Arrange the modifiers so that a deadlock appears when working with this code.
+The main method generates a deadlock.
+- The Solution.Friend class must be static and should NOT be private.
+- The bow method must be declared with the synchronized modifier.
+- The bowBack method must be declared with the synchronized modifier.

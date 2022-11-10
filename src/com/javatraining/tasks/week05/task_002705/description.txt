@@ -1,0 +1,6 @@
+Arrange synchronized blocks in the "secondMethod" so threads make a deadlock when using the Solution class.
+
+1. The "secondMethod" must contain a synchronized block on "lock" object.
+2. The "secondMethod" must contain a nested synchronized block on "this" object.
+3. The "lock" field must be private.
+4. The "secondMethod" method must not have "synchronized" modifier.

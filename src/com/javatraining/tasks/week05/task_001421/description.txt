@@ -1,0 +1,11 @@
+A class is a singleton (implements the Singleton pattern) if it allows you to create only one object of its type.
+https://www.baeldung.com/java-singleton
+
+Implement Singleton pattern:
+Create a Singleton class in a separate file.
+Add a static getInstance() method to it.
+Any time the getInstance() method is called, it must return the same object of the Singleton class.
+Think about how you can prevent the creation of other objects of this class.
+Make all constructors in the Singleton class private.
+As a result, it should be possible to create an object (an instance of a class) using only the getInstance method.
+
