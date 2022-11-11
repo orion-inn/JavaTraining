@@ -1,0 +1,12 @@
+Implement the calculateHorsesFinished method.
+It should:
+1. Count and return the number of finished horses. Use the isFinished() method.
+2. If the horse has not yet reached the finish line (!isFinished()), then:
+2.1. Print "Waiting for " + horse.getName() to the console.
+2.2. Wait until she completes the race. Think about what method you need to use for this.
+2.3. Do not consider such a horse as finished.
+
+- The calculateHorsesFinished method must call the isFinished method for each horse from the passed list.
+- If any of the horses passed in the list has not finished yet, the calculateHorsesFinished method should print "Waiting for " + horse.getName() to the console. Example message for the first horse: "Waiting for Horse_01".
+- If any of the horses passed in the list has not finished yet, the calculateHorsesFinished method must wait until it finishes. Use the correct method for waiting.
+- After the program is completed, the console should contain information that all horses have finished. Example message for the first horse: "Horse_01 has finished the race!".
