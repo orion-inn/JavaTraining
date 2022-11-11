@@ -1,0 +1,9 @@
+Write an implementation of the "run" method in the Stopwatch thread.
+Stopwatch should count the number of seconds from thread creation to input a line from console.
+Print the number of seconds to the console.
+
+1. The "run" method of the Stopwatch class must contain a loop.
+2. The "run" method must call Thread.sleep(1000).
+3. The "run" method must increment the value of the "seconds" field by 1 every second.
+4. After interrupting the Stopwatch thread (by calling the "interrupt" method), the "run" method should print the number of seconds to the console.
+5. There should be only one "run" method in the Stopwatch class.

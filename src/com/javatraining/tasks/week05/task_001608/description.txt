@@ -1,0 +1,8 @@
+Advancement in political debates
+1. Understand what the program does.
+2. Ivanov must be made to make the most speeches in political debates.
+3. Think about what method can be called on the ivanov object so that Ivanov talks until all free time is over.
+
+- Call the join method on the required object.
+- The toString method of the Politician policy class should display how many speeches the politician has made, for example: "Ivanov made a speech 35 times".
+- Do not change the methods responsible for output to the console.
