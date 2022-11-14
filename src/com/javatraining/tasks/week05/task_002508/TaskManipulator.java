@@ -6,7 +6,7 @@ public class TaskManipulator implements Runnable, CustomThreadManipulator {
 
     @Override
     public void run() {
-        while (!Thread.currentThread().isInterrupted()) { // to prevent "third" being printed even once
+        while (!Thread.currentThread().isInterrupted()) { // to prevent "forth" from being printed even once
             System.out.println(thread.getName());
             try {
                 Thread.sleep(100);
