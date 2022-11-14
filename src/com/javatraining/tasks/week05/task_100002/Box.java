@@ -2,13 +2,12 @@ package src.com.javatraining.tasks.week05.task_100002;
 
 import java.util.*;
 
-public class Box extends Shape {
+public class Box {
 
     private List<Shape> shapes;
     private double freeSpace;
 
     public Box(double volume) {
-        super(volume);
         this.shapes = new ArrayList<>();
         this.freeSpace = volume;
     }
@@ -20,5 +19,9 @@ public class Box extends Shape {
             return true;
         }
         return false;
+    }
+
+    public ArrayList<Shape> getShapes() {
+        return new ArrayList<>(shapes);
     }
 }

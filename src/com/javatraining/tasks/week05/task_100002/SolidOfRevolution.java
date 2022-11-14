@@ -1,11 +1,10 @@
 package src.com.javatraining.tasks.week05.task_100002;
 
-public class SolidOfRevolution extends Shape {
+public abstract class SolidOfRevolution implements Shape {
 
     private double radius;
 
-    public SolidOfRevolution (double volume, double radius) {
-        super(volume);
+    public SolidOfRevolution (double radius) {
         this.radius = radius;
     }
 

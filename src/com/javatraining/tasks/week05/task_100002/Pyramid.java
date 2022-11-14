@@ -14,5 +14,4 @@ public class Pyramid implements Shape {
     public double getVolume() {
         return h * s * 4 / 3;
     }
-
 }
