@@ -1,14 +1,16 @@
 package src.com.javatraining.tasks.week05.task_100002;
 
-public class Shape {
+public interface Shape extends Comparable<Shape> {
+    double getVolume();
 
-    private double volume;
-
-    public Shape(double volume) {
-        this.volume = volume;
-    }
-
-    public double getVolume() {
-        return this.volume;
+    @Override
+    default int compareTo(Shape other) {
+        if (this.getVolume() < other.getVolume()) {
+            return -1;
+        } else if (this.getVolume() > other.getVolume()) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

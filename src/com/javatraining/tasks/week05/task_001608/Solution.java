@@ -6,6 +6,7 @@ public class Solution {
 
     public static void main(String[] args) throws InterruptedException {
         Politician ivanov = new Politician("Ivanov");
+        ivanov.join();
         Politician petrov = new Politician("Petrov");
         Politician sidorov = new Politician("Sidorov");
 
