@@ -1,0 +1,14 @@
+1. In the main method, create a LinkedBlockingQueue<Runnable> queue.
+2. In the loop, add 10 Runnable tasks to the queue.
+3. For each task in the run method, call the doExpensiveOperation method with the task's serial number starting from 1, see the output example.
+4. Create a ThreadPoolExecutor object with the following parameters:
+- main number of threads (core) = 3,
+- maximum number of threads = 5,
+- time of keeping the thread alive after the end of the work = 1000,
+- time unit - milliseconds,
+- created in paragraph 1. task queue.
+5. Start all threads that are included in the main number of threads - the core, use the prestartAllCoreThreads method.
+6. Prohibit adding new tasks for execution to the pool (shutdown method).
+7. Give the ThreadPoolExecutor object 5 seconds to complete all tasks (the awaitTermination method and the TimeUnit.SECONDS parameter).
+
+

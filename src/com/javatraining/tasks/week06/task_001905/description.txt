@@ -1,0 +1,15 @@
+Read about Adapter design pattern
+https://refactoring.guru/design-patterns/adapter
+
+Adapt Customer and Contact to RowItem.
+The adapter class is DataAdapter.
+
+Initialize countries before starting program execution (In the static block of Solution class).
+Country code and name match:
+UA Ukraine
+RU Russia
+CA Canada
+
+The DataAdapter class must implement the RowItem interface.
+DataAdapter class must contain two private fields: customer of type Customer and contact Contact.
+In the DataAdapter class, implement the methods of the RowItem interface using examples from comments.
