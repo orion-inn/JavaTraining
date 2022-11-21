@@ -1,8 +1,26 @@
 package src.com.javatraining.tasks.week06.task_002806;
 
+import java.util.concurrent.*;
+
 public class Solution {
     public static void main(String[] args) throws InterruptedException {
         //Add your code here
+        ExecutorService executor = Executors.newFixedThreadPool(5);
+
+        for (int i = 0; i < 10; i++) {
+            int finalI = i;
+            executor.execute(() -> doExpensiveOperation(finalI + 1));
+        }
+
+        executor.shutdown();
+
+        try {
+            if (!executor.awaitTermination(5, TimeUnit.SECONDS)) {
+                executor.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            executor.shutdownNow();
+        }
 
         /* output example
 pool-1-thread-2, localId=2
