@@ -8,8 +8,8 @@ public class Solution {
         ExecutorService executor = Executors.newFixedThreadPool(5);
 
         for (int i = 0; i < 10; i++) {
-            int finalI = i;
-            executor.execute(() -> doExpensiveOperation(finalI + 1));
+            int finalI = i + 1;
+            executor.execute(() -> doExpensiveOperation(finalI));
         }
 
         executor.shutdown();
