@@ -24,9 +24,12 @@ public class Exercise9 {
 		// Sort the countries by their population densities in descending order ignoring
 		// zero population countries
 
-//		var countriesSortedByPopulationDensityDescOrder = //	your code here
-//
-//		countriesSortedByPopulationDensityDescOrder.forEach(out::println);
+		var countriesSortedByPopulationDensityDescOrder = worldDao.findAllCountries().stream()
+				.filter(livesNobody.negate())
+				.sorted(populationDensityComparator.reversed())
+				.toList();
+
+		countriesSortedByPopulationDensityDescOrder.forEach(out::println);
 	}
 
 }
