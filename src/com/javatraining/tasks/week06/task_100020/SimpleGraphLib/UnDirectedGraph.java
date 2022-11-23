@@ -5,7 +5,6 @@ public class UnDirectedGraph extends DirectedGraph {
     @Override
     public void addEdge(Vertex from, Vertex to) {
         super.addEdge(from, to);
-        addVertex(to);
         to.addNeighbour(from);
     }
 }

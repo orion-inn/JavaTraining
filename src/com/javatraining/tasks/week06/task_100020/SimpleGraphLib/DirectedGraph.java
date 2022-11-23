@@ -19,6 +19,7 @@ public class DirectedGraph implements Graph {
     @Override
     public void addEdge(Vertex from, Vertex to) {
         addVertex(from);
+        addVertex(to);
         from.addNeighbour(to);
     }
 
@@ -38,7 +39,9 @@ public class DirectedGraph implements Graph {
                 if (current.equals(to)) {
                     break;
                 }
-                current.getNeighbours().forEach(neighbour -> stack.push((Vertex) neighbour));
+                vertices.get(vertices.indexOf(current))
+                        .getNeighbours()
+                        .forEach(neighbour -> stack.push((Vertex) neighbour));
             }
         }
 
