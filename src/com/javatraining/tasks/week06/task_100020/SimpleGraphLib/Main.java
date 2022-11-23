@@ -21,9 +21,8 @@ public class Main {
         graph.addEdge(v4,v5);
         graph.addEdge(v4,v6);
 
-        graph.printGraph();
-
-        List<Vertex> path = graph.getPath(new Vertex("1"), new Vertex("6"));
+        //List<Vertex> path = graph.getPath(new Vertex("1"), new Vertex("6"));
+        List<Vertex> path = graph.getPath(v1, v6);
 
         if (path == null){
             System.out.println("No path..");

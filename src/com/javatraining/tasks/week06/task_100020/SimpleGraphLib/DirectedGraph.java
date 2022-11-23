@@ -1,7 +1,6 @@
 package src.com.javatraining.tasks.week06.task_100020.SimpleGraphLib;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class DirectedGraph implements Graph {
     List<Vertex> vertices;
@@ -19,24 +18,31 @@ public class DirectedGraph implements Graph {
 
     @Override
     public void addEdge(Vertex from, Vertex to) {
-        int indexFrom = vertices.indexOf(from);
-
-        if (indexFrom == - 1) {
-            addVertex(from);
-            indexFrom = vertices.size() - 1;
-        }
-
-        List<Vertex> neighbours = vertices.get(indexFrom).getNeighbours();
-        int indexTo = neighbours.indexOf(to);
-
-        if (indexTo == -1) {
-            neighbours.add(to);
-        }
+        addVertex(from);
+        from.addNeighbour(to);
     }
 
     @Override
     public List<Vertex> getPath(Vertex from, Vertex to) {
-        return null;
+        List<Vertex> path = new ArrayList<>();
+        Deque<Vertex> stack = new LinkedList<>();
+        Set<Vertex> visited = new HashSet<>();
+
+        stack.push(from);
+
+        while (!stack.isEmpty()) {
+            Vertex current = stack.pop();
+            if (!visited.contains(current)) {
+                visited.add(current);
+                path.add(current);
+                if (current.equals(to)) {
+                    break;
+                }
+                current.getNeighbours().forEach(neighbour -> stack.push((Vertex) neighbour));
+            }
+        }
+
+        return path;
     }
 
     public void printGraph() {
