@@ -1,0 +1,14 @@
+Simple Graph lib:
+Supports 2 types of graphs - directed and undirected with 3 operations:
+addVertex - adds vertex to the graph
+addEdge - adds edge to the graph
+getPath - returns a list of edges between 2 vertices (path doesn’t have to be optimal)
+
+Implement unit tests :
+
+1) DirectedGraphTest
+a) in a method with @Before annotation create some DirectedGraph
+b) create pathShouldExist() test
+c) create pathShouldNotExist() test
+
+2) Same for UnDirectedGraphTest
