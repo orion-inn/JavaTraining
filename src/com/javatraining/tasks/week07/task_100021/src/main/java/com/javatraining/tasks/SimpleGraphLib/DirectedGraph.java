@@ -37,13 +37,13 @@ public class DirectedGraph<T> implements Graph<T> {
                 visited.add(current);
                 path.add(current);
                 if (current.equals(to)) {
-                    break;
+                    return path;
                 }
                 vertices.get(vertices.indexOf(current)).getNeighbours().forEach(stack::push);
             }
         }
 
-        return path;
+        return null;
     }
 
     public void printGraph() {
