@@ -1,4 +1,4 @@
-package com.javatraining.tasks.domain;
+package com.javatraining.tasks.entity;
 
 /**
  *

@@ -1,6 +1,6 @@
-package com.javatraining.tasks.exercises;
+package com.javatraining.tasks.helper;
 
-import com.javatraining.tasks.domain.Country;
+import com.javatraining.tasks.entity.Country;
 
 /**
  * @author Binnur Kurt <binnur.kurt@gmail.com>

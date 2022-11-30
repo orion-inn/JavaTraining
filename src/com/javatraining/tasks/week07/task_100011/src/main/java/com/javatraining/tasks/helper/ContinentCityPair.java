@@ -1,7 +1,7 @@
-package com.javatraining.tasks.exercises;
+package com.javatraining.tasks.helper;
 
 import java.util.Optional;
-import com.javatraining.tasks.domain.City;
+import com.javatraining.tasks.entity.City;
 
 /**
  * @author Binnur Kurt <binnur.kurt@gmail.com>
