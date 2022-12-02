@@ -2,14 +2,19 @@ package com.javatraining.tasks.SimpleGraphLib;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.*;
 
 public class Vertex<T> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Vertex.class);
+
     private T value;
     private final List<Vertex<T>> neighbours;
 
     public Vertex(T value) {
         this.value = value;
         this.neighbours = new ArrayList<>();
+
+        LOGGER.debug("A vertex ({}) created", this.value);
     }
 
     public T getValue() {
@@ -27,7 +32,9 @@ public class Vertex<T> {
     public void addNeighbour(Vertex<T> neighbour) {
         if (!neighbours.contains(neighbour)) {
             this.neighbours.add(neighbour);
+            LOGGER.debug("A neighboring vertex ({}) added", neighbour.getValue());
         }
+        LOGGER.debug("A vertex ({}) is already in neighbours", neighbour.getValue());
     }
 
     @Override

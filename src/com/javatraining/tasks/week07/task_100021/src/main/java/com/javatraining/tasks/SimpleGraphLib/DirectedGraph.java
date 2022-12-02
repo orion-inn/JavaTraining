@@ -1,19 +1,25 @@
 package com.javatraining.tasks.SimpleGraphLib;
 
 import java.util.*;
+import org.slf4j.*;
 
 public class DirectedGraph<T> implements Graph<T> {
+    public static final Logger LOGGER = LoggerFactory.getLogger(Graph.class);
+
     List<Vertex<T>> vertices;
 
     public DirectedGraph() {
         vertices = new ArrayList<>();
+        LOGGER.debug("A new directed graph created");
     }
 
     @Override
     public void addVertex(Vertex<T> a) {
         if (!vertices.contains(a)) {
             vertices.add(a);
+            LOGGER.debug("A vertex ({}) added to the graph", a.getValue());
         }
+        LOGGER.debug("The vertex ({}) is already in the graph", a.getValue());
     }
 
     @Override
@@ -21,6 +27,7 @@ public class DirectedGraph<T> implements Graph<T> {
         addVertex(from);
         addVertex(to);
         from.addNeighbour(to);
+        LOGGER.debug("An edge ({} -> {}) added to the graph", from.getValue(), to.getValue());
     }
 
     @Override
@@ -37,12 +44,14 @@ public class DirectedGraph<T> implements Graph<T> {
                 visited.add(current);
                 path.add(current);
                 if (current.equals(to)) {
+                    LOGGER.debug("A path between {} and {} found", from.getValue(), to.getValue());
                     return path;
                 }
                 vertices.get(vertices.indexOf(current)).getNeighbours().forEach(stack::push);
             }
         }
 
+        LOGGER.debug("No path between {} and {} found", from.getValue(), to.getValue());
         return null;
     }
 
