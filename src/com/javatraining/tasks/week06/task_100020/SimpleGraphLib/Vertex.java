@@ -24,6 +24,12 @@ public class Vertex <T>{
         return neighbours;
     }
 
+    public void addNeighbour(Vertex neighbour) {
+        if (!neighbours.contains(neighbour)) {
+            this.neighbours.add(neighbour);
+        }
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

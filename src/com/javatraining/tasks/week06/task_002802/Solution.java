@@ -1,5 +1,8 @@
 package src.com.javatraining.tasks.week06.task_002802;
 
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class Solution {
 
     public static void main(String[] args) {
@@ -31,5 +34,25 @@ public class Solution {
         factory.newThread(r).start();
         factory.newThread(r).start();
         factory.newThread(r).start();
+    }
+
+    public static class MyThreadFactory implements ThreadFactory {
+
+        static AtomicInteger factoryNumber = new AtomicInteger(1);
+        AtomicInteger threadNumber = new AtomicInteger(1);
+        int a;
+
+        public MyThreadFactory() {
+            a = factoryNumber.getAndIncrement();
+        }
+
+        @Override
+        public Thread newThread(Runnable r) {
+            Thread thread = new Thread(r);
+            thread.setName(thread.getThreadGroup().getName() + "-pool-" + a + "-thread-" + threadNumber.getAndIncrement());
+            thread.setPriority(Thread.NORM_PRIORITY);
+            thread.setDaemon(false);
+            return thread;
+        }
     }
 }

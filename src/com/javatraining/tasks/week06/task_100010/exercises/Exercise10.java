@@ -1,7 +1,10 @@
 package src.com.javatraining.tasks.week06.task_100010.exercises;
 
+import java.util.Comparator;
 import java.util.Optional;
 import java.util.function.BiConsumer;
+import java.util.stream.Collectors;
+
 import src.com.javatraining.tasks.week06.task_100010.dao.InMemoryWorldDao;
 import src.com.javatraining.tasks.week06.task_100010.dao.WorldDao;
 import src.com.javatraining.tasks.week06.task_100010.domain.Country;
@@ -17,9 +20,11 @@ public class Exercise10 {
 	public static void main(String[] args) {
 		// Find the richest country of each continent with respect to their GNP (Gross National Product) values.
 
-//        var richestCountryByContinent = //	your code here
-//
-//        richestCountryByContinent.forEach(printEntry);
+		var richestCountryByContinent = worldDao.findAllCountries().stream()
+				.collect(Collectors.groupingBy(Country::getContinent,
+						 Collectors.maxBy(Comparator.comparing(Country::getGnp))));
+
+        richestCountryByContinent.forEach(printEntry);
 	}
 
 }

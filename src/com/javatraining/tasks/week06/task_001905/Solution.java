@@ -6,12 +6,55 @@ import java.util.Map;
 public class Solution {
     public static Map<String, String> countries = new HashMap<String, String>();
 
+    static {
+        countries.put("UA", "Ukraine");
+        countries.put("RU", "Russia");
+        countries.put("CA", "Canada");
+    }
+
     public static void main(String[] args) {
 
     }
 
-    public static class DataAdapter {
+    public static class DataAdapter implements RowItem {
+
+        private Customer customer;
+        private Contact contact;
+
         public DataAdapter(Customer customer, Contact contact) {
+            this.customer = customer;
+            this.contact = contact;
+        }
+
+        @Override
+        public String getCountryCode() {
+            String countryName = customer.getCountryName();
+            String countryCode = countries.entrySet().stream()
+                    .filter(entry -> entry.getValue().equals(countryName))
+                    .map(Map.Entry::getKey)
+                    .findFirst()
+                    .orElse("<UNKNOWN>"); // not sure what should I return as the default value
+            return countryCode;
+        }
+
+        @Override
+        public String getCompany() {
+            return customer.getCompanyName();
+        }
+
+        @Override
+        public String getContactFirstName() {
+            return contact.getName().split(", ")[1];
+        }
+
+        @Override
+        public String getContactLastName() {
+            return contact.getName().split(", ")[0];
+        }
+
+        @Override
+        public String getDialString() {
+            return "callto://+" + contact.getPhoneNumber().replaceAll("[^0-9]", "");
         }
     }
 
